@@ -1,4 +1,3 @@
-import prisma from "../services/prismaClient.js";
 import { exec } from "child_process";
 import { fileURLToPath } from "url";
 import path, { dirname } from "path";
@@ -44,9 +43,6 @@ const createNewSheetForAGivenUser = async (req, res) => {
 const getAllSheetsOfUsers = async (req, res) => {
   try {
     const { userId } = req.params;
-    // const { id } = req.user;
-    // if (userId != id)
-    //   return res.status(401).json({ message: "Illegal Access" });
     const allSheets = await prisma.sheet.findMany({
       where: {
         userId: userId

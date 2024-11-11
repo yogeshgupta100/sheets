@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat-logo {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Special Elite', cursive;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+input,
+a {
+  font-family: 'Special Elite', cursive;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.sheet {
+  display: grid;
+  padding: 0;
+  width: fit-content;
+  overflow-x: scroll;
+}
+
+.row{
+  min-width: 100%;
+  width: fit-content;
+}
+
+.box {
+  width: 100%;
+  border: 1px solid #bb4848;
+  box-sizing: border-box;
+  min-width: 80px;
+}
+
+.box>input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-sizing: border-box;
+}
+
+.signup{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.signup-form {
+  width: 25%;
+  max-width: 40%;
+  padding: 25px 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+  .form-heading{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    h2{
+      background-color: #fff;
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      padding: 0 10px;
+      border-radius: 8px;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  margin-top: 0.6rem;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b33d3d;
+}
+
+
+.spinner {
+  width: 224px;
+  height: 224px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%,#ff6d6d);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  animation: spinner-zp9dbg 1s infinite linear;
+}
+
+@keyframes spinner-zp9dbg {
+  to {
+     transform: rotate(1turn);
+  }
+}
